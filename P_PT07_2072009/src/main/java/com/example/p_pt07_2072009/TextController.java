@@ -18,9 +18,6 @@ public class TextController {
 
     public void open(){
         FileChooser chooser = new FileChooser();
-        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Text Documents", "*.txt");
-        chooser.getExtensionFilters().add(extensionFilter);
-        chooser.setSelectedExtensionFilter(extensionFilter);
         File f = chooser.showOpenDialog(txt.getScene().getWindow());
         if (f != null) {
             Path p = Paths.get(f.toURI());
@@ -45,9 +42,6 @@ public class TextController {
     }
     public void saveas(){
         FileChooser chooser = new FileChooser();
-        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Text Documents", "*.txt");
-        chooser.getExtensionFilters().add(extensionFilter);
-        chooser.setSelectedExtensionFilter(extensionFilter);
         File f = chooser.showSaveDialog(txt.getScene().getWindow());
         if (f != null) {
             path = Paths.get(f.toURI());
